@@ -1,15 +1,17 @@
 import "./App.css";
-import UploadForm from "./UploadForm";
+import UploadForm from "./components/UploadForm";
 import {
   BrowserRouter as Router,
   Routes,
   Route,
   useNavigate,
 } from "react-router-dom";
-import { authentication } from "./firebase-config";
+import { authentication } from "./firebase/firebase-config";
 import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
-import { storage } from "./firebase-config";
+import { storage } from "./firebase/firebase-config";
 import React, { useState } from "react";
+// import uuid from "react-uuid";
+// import ImageGrid from "./components/ImageGrid";
 
 function App() {
   // <Router>
@@ -46,6 +48,7 @@ function App() {
   return (
     <div className="App">
       <h1>Please login to continue</h1>
+      {/* <h1>{uuid.v4()}</h1> */}
       <button className="button-1" onClick={signInWithGoogle}>
         Login
       </button>
@@ -56,6 +59,7 @@ function App() {
         </form>
       </div> */}
       <UploadForm />
+      {/* <ImageGrid /> */}
     </div>
   );
 }

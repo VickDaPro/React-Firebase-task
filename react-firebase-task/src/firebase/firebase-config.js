@@ -1,3 +1,8 @@
+// import * as firebase from "firebase/app";
+// import "firebase/auth";
+// import "firebase/storage";
+// import "firebase/firestore";
+
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 import "firebase/storage";
@@ -14,8 +19,14 @@ const firebaseConfig = {
   measurementId: "G-LKQEP6TQGP",
 };
 
+// firebase.initializeApp(firebaseConfig);
+
+// export const authentication = firebase.auth();
+// export const projectFirestore = firebase.storage();
+// export const projectStorage = firebase.firestore();
+
 const app = initializeApp(firebaseConfig);
 
 export const authentication = getAuth(app);
-export const db = getFirestore(app);
+export const projectFirestore = getFirestore(app);
 export const storage = getStorage(app);

@@ -20,7 +20,7 @@ const UploadForm = () => {
   };
   return (
     <form>
-      <h1>FireGram</h1>
+      <h1>Image Gallery</h1>
       <h2>Pictures</h2>
       <input type="file" onChange={changeHandler} />
       <div className="output">
